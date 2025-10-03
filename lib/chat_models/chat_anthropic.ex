@@ -1295,7 +1295,7 @@ defmodule LangChain.ChatModels.ChatAnthropic do
     |> Utils.conditionally_add_to_map("cache_control", get_cache_control_setting(result.options))
   end
 
-  def for_api(%NativeTool{name: "web_fetch", configuration: %{"type" => type} = config}) do
+  def function_for_api(%NativeTool{name: "web_fetch", configuration: %{"type" => type} = config}) do
     %{
       name: "web_fetch",
       type: type
